@@ -140,3 +140,20 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+.btn-primary {
+    border-width: 2px;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background-color: white !important;
+    color: #181a1b !important;
+    border-color: white !important;
+}
+
+.btn-primary.active {
+    background-color: white !important;
+    color: #181a1b !important;
+    border-color: white !important;
+}

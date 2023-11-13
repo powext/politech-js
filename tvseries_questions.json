@@ -1,0 +1,92 @@
+[
+  {
+    "question": "Which TV series is known for the quote 'I am the one who knocks'?",
+    "options": ["Breaking Bad", "Game of Thrones", "Mad Men", "The Wire"],
+    "correct_answers": ["Breaking Bad"],
+    "type": "single"
+  },
+  {
+    "question": "In 'Friends', what is the name of Ross's second wife?",
+    "options": ["Rachel", "Emily", "Carol", "Monica"],
+    "correct_answers": ["Emily"],
+    "type": "single"
+  },
+  {
+    "question": "Which character in 'Stranger Things' is played by Millie Bobby Brown?",
+    "options": ["Eleven", "Mike", "Dustin", "Lucas"],
+    "correct_answers": ["Eleven"],
+    "type": "single"
+  },
+  {
+    "question": "The TV series 'The Crown' is based on the reign of which British monarch?",
+    "options": ["Queen Elizabeth II", "King George VI", "Queen Victoria", "Queen Elizabeth I"],
+    "correct_answers": ["Queen Elizabeth II"],
+    "type": "single"
+  },
+  {
+    "question": "Which of these series is a spin-off of 'Breaking Bad'?",
+    "options": ["Better Call Saul", "Ozark", "El Camino", "Narcos"],
+    "correct_answers": ["Better Call Saul"],
+    "type": "single"
+  },
+  {
+    "question": "In 'The Office (US)', who eventually becomes the manager of Dunder Mifflin Scranton branch?",
+    "options": ["Jim Halpert", "Dwight Schrute", "Michael Scott", "Andy Bernard"],
+    "correct_answers": ["Dwight Schrute"],
+    "type": "single"
+  },
+  {
+    "question": "Which TV series features a high school chemistry teacher turned methamphetamine manufacturer?",
+    "options": ["Dexter", "Breaking Bad", "The Sopranos", "Narcos"],
+    "correct_answers": ["Breaking Bad"],
+    "type": "single"
+  },
+  {
+    "question": "In 'Game of Thrones', who is Jon Snow's real mother?",
+    "options": ["Catelyn Stark", "Lyanna Stark", "Cersei Lannister", "Daenerys Targaryen"],
+    "correct_answers": ["Lyanna Stark"],
+    "type": "single"
+  },
+  {
+    "question": "Which TV series is set in the fictional town of Hawkins, Indiana?",
+    "options": ["Stranger Things", "Twin Peaks", "Riverdale", "Smallville"],
+    "correct_answers": ["Stranger Things"],
+    "type": "single"
+  },
+  {
+    "question": "Who created the TV series 'Twin Peaks'?",
+    "options": ["David Lynch", "Steven Spielberg", "J.J. Abrams", "Martin Scorsese"],
+    "correct_answers": ["David Lynch"],
+    "type": "single"
+  },
+  {
+    "question": "In 'The Simpsons', who shot Mr. Burns?",
+    "options": ["Homer Simpson", "Bart Simpson", "Maggie Simpson", "Lisa Simpson"],
+    "correct_answers": ["Maggie Simpson"],
+    "type": "single"
+  },
+  {
+    "question": "Which TV series features a fictional version of the Baltimore Police Department?",
+    "options": ["The Wire", "NYPD Blue", "Homicide: Life on the Street", "Law & Order"],
+    "correct_answers": ["The Wire"],
+    "type": "single"
+  },
+  {
+    "question": "In 'The Big Bang Theory', what is Sheldon Cooper's favorite spot on the couch?",
+    "options": ["The left corner", "The right corner", "The center", "The armrest"],
+    "correct_answers": ["The left corner"],
+    "type": "single"
+  },
+  {
+    "question": "Is 'Black Mirror' an anthology series?",
+    "options": ["True", "False"],
+    "correct_answers": ["True"],
+    "type": "truefalse"
+  },
+  {
+    "question": "Which TV series famously ends with the line 'I got off the plane'?",
+    "options": ["Friends", "How I Met Your Mother", "The Office (US)", "Seinfeld"],
+    "correct_answers": ["Friends"],
+    "type": "single"
+  }
+]

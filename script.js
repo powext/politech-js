@@ -5,23 +5,31 @@ function shuffleArray(array) {
     }
 }
 
-let currentQuestionIndex = 0;
+let currQuestionIndex = 0;
 let questions = [];
-let score = 0;
+let guessed = 0;
+let answerState = [false, false, false, false]
+let startTime = undefined;
 
-async function initQuiz() {
+async function initQuiz(event) {
+    const id = event.target.id;
+
     try {
-        questions = await fetch('./questions.json').then(res => res.json());
+        questions = await fetch(id === 'movies' ? './movies_questions.json' : './tvseries_questions.json',{ mode: 'no-cors'}).then(res => res.json());
     } catch (err) {
         console.error(err);
         return;
     }
 
+    startTime = new Date().getTime();
+
+    document.getElementById("start-again").classList.add("hidden");
     document.getElementById("score").classList.add("hidden");
     document.getElementById("start").classList.add("hidden");
     document.getElementById("question").classList.remove("hidden");
     shuffleArray(questions);
-    updateQuestion(questions[currentQuestionIndex]);
+    questions = questions.slice(0, 10);
+    updateQuestion(questions[currQuestionIndex]);
 }
 
 function updateQuestion(question) {
@@ -34,8 +42,17 @@ function updateQuestion(question) {
         button.style.animation = 'none';
     });
 
+    if (questions[currQuestionIndex].type === "multiple") {
+        document.getElementById("multiple-disclaimer").classList.remove("hidden");
+        document.getElementById("next").classList.remove("hidden");
+    } else {
+        document.getElementById("multiple-disclaimer").classList.add("hidden");
+        document.getElementById("next").classList.add("hidden");
+    }
+
     setTimeout(() => {
         buttons.forEach((button, index) => {
+            if (questions[currQuestionIndex].options[index] == null) return;
             button.classList.remove("hidden");
             button.innerHTML = question.options[index];
             button.classList.remove("dbl", "btn-error", "btn-success");
@@ -52,49 +69,95 @@ function disableButtons(disable) {
 
 function resetButtons() {
     for (let i = 0; i < 4; i++) {
-        document.getElementById(`answer${i + 1}`).className = "btn fadeIn";
+        document.getElementById(`answer${i + 1}`).className = "btn btn-outline btn-primary fadeIn";
     }
+    answerState = [false, false, false, false];
 }
 
 function handleAnswerClick(event) {
     if (event.target.classList.contains("dbl")) return;
 
-    const selectedAnswerIndex = parseInt(event.target.id.slice(-1)) - 1;
-    const isCorrect = questions[currentQuestionIndex].correct_answer === questions[currentQuestionIndex].options[selectedAnswerIndex];
+    const answerIndex = parseInt(event.target.id.slice(-1)) - 1;
+    answerState[answerIndex] = !answerState[answerIndex];
+    event.target.classList.toggle("active");
 
-    console.log(isCorrect ? "Correct" : "False");
-
-    disableButtons(true);
-    event.target.classList.add(isCorrect ? "btn-success" : "btn-error");
-
-    if (!isCorrect) {
-        const correctAnswerIndex = questions[currentQuestionIndex].options.indexOf(questions[currentQuestionIndex].correct_answer);
-        document.getElementById(`answer${correctAnswerIndex + 1}`).classList.add("btn-success");
-    } else {
-        score++;
+    if (questions[currQuestionIndex].type === "single" || questions[currQuestionIndex].type === "truefalse") {
+        validateAnswers();
     }
+}
+
+function validateAnswers() {
+    let currQuestion = questions[currQuestionIndex];
+
+    let answersValidated = [];
+    currQuestion.options.forEach((option, index) => {
+         if (!answerState[index]) {
+              answersValidated[index] = undefined;
+         } else {
+            answersValidated[index] = currQuestion.correct_answers.includes(option);
+         }
+         if (answersValidated[index] === true) {
+             guessed++;
+             document.getElementById(`answer${index + 1}`).classList.remove("btn-primary");
+             document.getElementById(`answer${index + 1}`).classList.add("btn-success");
+         } else if (answersValidated[index] === false) {
+             document.getElementById(`answer${index + 1}`).classList.remove("btn-primary");
+             document.getElementById(`answer${index + 1}`).classList.add("btn-error");
+         } else if (currQuestion.correct_answers.includes(option)) {
+             document.getElementById(`answer${index + 1}`).classList.remove("btn-primary");
+             document.getElementById(`answer${index + 1}`).classList.add("btn-success");
+         }
+    });
+    disableButtons(true);
 
     setTimeout(() => {
-        if (currentQuestionIndex === questions.length - 1) {
+        if (currQuestionIndex === questions.length - 1) {
             completeQuiz();
             return;
         }
         resetButtons();
-        currentQuestionIndex++;
-        updateQuestion(questions[currentQuestionIndex]);
-    }, 2000);
+        currQuestionIndex++;
+        updateQuestion(questions[currQuestionIndex]);
+    }, 20);
 }
 
+function next() {
+    validateAnswers();
+}
+
+function calculateScore(totalGuessed, totalQuestions, timePassed) {
+    const baseScorePerGuess = 10; // Base score for each correct guess
+    const timePenalty = 0.5; // Score reduction per unit of time
+    const guessPenalty = 5; // Penalty for each unguessed question
+
+    let score = totalGuessed * baseScorePerGuess - (totalQuestions - totalGuessed) * guessPenalty - timePassed * timePenalty;
+    return Math.max(score, 0); // Ensures score doesn't go below 0
+}
+
+
 function completeQuiz() {
-    document.getElementById("score").textContent = `Score: ${score}`;
-    document.getElementById("start").textContent = "Start again";
+    let endTime = new Date().getTime();
+    let timeTaken = endTime - startTime;
+    let totalAnswers = questions.reduce((acc, curr) => acc + curr.correct_answers.length, 0);
+    if (guessed < 0) guessed = 0;
+
+    let score = calculateScore(guessed,totalAnswers, timeTaken / 10000);
+
+    document.getElementById("score-int").textContent = `Score: ${score}`;
+    document.getElementById("score-time").textContent = `Time: ${timeTaken / 1000}s`;
+    document.getElementById("score-correct").textContent = `Correct Answers: ${guessed}/${totalAnswers}`;
     document.getElementById("score").classList.remove("hidden");
     document.getElementById("question").classList.add("hidden");
     resetButtons();
     document.querySelectorAll('.btn').forEach(btn => btn.classList.add("hidden"));
-    document.getElementById("start").classList.remove("hidden");
-    currentQuestionIndex = 0;
+    document.getElementById("start-again").classList.remove("hidden");
+    currQuestionIndex = 0;
     questions = [];
-    score = 0;
+    guessed = 0;
+}
+
+function startAgain() {
+    document.getElementById("start-again").classList.add("hidden");
+    document.getElementById("start").classList.remove("hidden");
 }
 
