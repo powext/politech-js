@@ -70,6 +70,8 @@ function handleAnswerClick(event) {
     if (!isCorrect) {
         const correctAnswerIndex = questions[currentQuestionIndex].options.indexOf(questions[currentQuestionIndex].correct_answer);
         document.getElementById(`answer${correctAnswerIndex + 1}`).classList.add("btn-success");
+    } else {
+        score++;
     }
 
     setTimeout(() => {
