@@ -58,7 +58,7 @@ function updateQuestion(question) {
             button.classList.remove("dbl", "btn-error", "btn-success");
             button.style.animation = `fadeIn 0.5s ease-out ${index * 0.12}s forwards`;
         });
-    }, 2000);
+    }, 50);
 }
 
 function disableButtons(disable) {
@@ -118,7 +118,7 @@ function validateAnswers() {
         resetButtons();
         currQuestionIndex++;
         updateQuestion(questions[currQuestionIndex]);
-    }, 20);
+    }, 2000);
 }
 
 function next() {
