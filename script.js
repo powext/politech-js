@@ -58,7 +58,7 @@ function updateQuestion(question) {
             button.classList.remove("dbl", "btn-error", "btn-success");
             button.style.animation = `fadeIn 0.5s ease-out ${index * 0.12}s forwards`;
         });
-    }, 50);
+    }, 2000);
 }
 
 function disableButtons(disable) {
