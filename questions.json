@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Who directed the movie 'Pulp Fiction'?",
+    "options": ["Steven Spielberg", "Martin Scorsese", "Quentin Tarantino", "Christopher Nolan"],
+    "correct_answer": "Quentin Tarantino"
+  },
+  {
+    "question": "Which movie won the Best Picture Oscar in 1994?",
+    "options": ["Forrest Gump", "Pulp Fiction", "The Shawshank Redemption", "Jurassic Park"],
+    "correct_answer": "Forrest Gump"
+  },
+  {
+    "question": "What is the highest-grossing film of all time?",
+    "options": ["Titanic", "Avatar", "Avengers: Endgame", "Star Wars: The Force Awakens"],
+    "correct_answer": "Avatar"
+  },
+  {
+    "question": "Who played the Joker in 'The Dark Knight'?",
+    "options": ["Joaquin Phoenix", "Jack Nicholson", "Heath Ledger", "Jared Leto"],
+    "correct_answer": "Heath Ledger"
+  },
+  {
+    "question": "What was the first feature-length animated movie ever released?",
+    "options": ["Snow White and the Seven Dwarfs", "Fantasia", "Cinderella", "Sleeping Beauty"],
+    "correct_answer": "Snow White and the Seven Dwarfs"
+  },
+  {
+    "question": "In which movie did Tom Hanks say, 'Life is like a box of chocolates'?",
+    "options": ["Cast Away", "The Terminal", "Forrest Gump", "Big"],
+    "correct_answer": "Forrest Gump"
+  },
+  {
+    "question": "Which film did Steven Spielberg win his first Oscar for Best Director?",
+    "options": ["Jaws", "E.T.", "Schindler's List", "Saving Private Ryan"],
+    "correct_answer": "Schindler's List"
+  },
+  {
+    "question": "What is the name of the kingdom where the 2013 animated movie 'Frozen' is set?",
+    "options": ["Arendelle", "Corona", "DunBroch", "Atlantica"],
+    "correct_answer": "Arendelle"
+  },
+  {
+    "question": "Who starred as the lead role in the 2001 movie 'Lara Croft: Tomb Raider'?",
+    "options": ["Angelina Jolie", "Charlize Theron", "Jennifer Lawrence", "Scarlett Johansson"],
+    "correct_answer": "Angelina Jolie"
+  },
+  {
+    "question": "What 1975 movie is the famous quote 'You're gonna need a bigger boat' from?",
+    "options": ["The Godfather", "Jaws", "Rocky", "One Flew Over the Cuckoo's Nest"],
+    "correct_answer": "Jaws"
+  }
+]
