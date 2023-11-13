@@ -82,6 +82,8 @@ body {
     background-color: #181a1b;
     min-height: 100vh;
     font-family: Figtree;
+    display: flex;
+    flex-direction: column;
 }
 
 .rainbow-text {
@@ -116,4 +118,24 @@ body {
 
 .fadeIn {
     animation: fadeIn 0.5s ease-out forwards;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #949494;
+}
+
+footer a {
+    color: #fafafa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

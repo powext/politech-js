@@ -95,3 +95,4 @@ function completeQuiz() {
     questions = [];
     score = 0;
 }
+
