@@ -94,5 +94,40 @@
     "options": ["Terminator", "Rocky", "Die Hard", "Rambo"],
     "correct_answers": ["Terminator"],
     "type": "single"
+  },
+  {
+    "question": "Which movie features this iconic spaceship design?",
+    "options": ["Star Wars: A New Hope", "Star Trek: The Motion Picture", "Guardians of the Galaxy", "2001: A Space Odyssey"],
+    "correct_answers": ["Star Wars: A New Hope"],
+    "image_href": "https://hips.hearstapps.com/hmg-prod/images/mf-over-takodana-swct-1544517948.png",
+    "type": "image"
+  },
+  {
+    "question": "In which movie does this building play a significant role?",
+    "options": ["Blade Runner", "Inception", "The Dark Knight", "Ghostbusters"],
+    "correct_answers": ["Inception"],
+    "image_href": "https://www.digitaltrends.com/wp-content/uploads/2014/09/inception-bend.jpg?fit=750%2C495&p=1",
+    "type": "image"
+  },
+  {
+    "question": "This famous scene is from which movie?",
+    "options": ["Pulp Fiction", "The Godfather", "Goodfellas", "Scarface"],
+    "correct_answers": ["Pulp Fiction"],
+    "image_href": "https://faroutmagazine.co.uk/static/uploads/1/2016/02/Remembering-when-Quentin-Tarantino-danced-behind-the-camera-during-iconic-Pulp-Fiction-scene.jpg",
+    "type": "image"
+  },
+  {
+    "question": "Identify the movie from this iconic costume.",
+    "options":  ["Batman Begins", "Spider-Man", "Iron Man", "The Avengers"],
+    "correct_answers": ["Spider-Man"],
+    "image_href": "https://i.imgur.com/8Eq6V.jpg",
+    "type": "image"
+  },
+  {
+    "question": "Which movie features this landmark in a key scene?",
+    "options":  ["Skyfall", "Mission: Impossible", "The Bourne Ultimatum", "Casino Royale"],
+    "correct_answers": ["Skyfall"],
+    "image_href": "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/8/2022/08/2B339T7.jpg",
+    "type": "image"
   }
 ]

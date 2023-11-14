@@ -48,6 +48,12 @@ function updateQuestion(question) {
     } else {
         document.getElementById("multiple-disclaimer").classList.add("hidden");
         document.getElementById("next").classList.add("hidden");
+        if (questions[currQuestionIndex].type === "image") {
+            document.getElementById("image").classList.remove("hidden");
+            document.getElementById("image").src = question.image_href;
+        } else {
+            document.getElementById("image").classList.add("hidden");
+        }
     }
 
     setTimeout(() => {
@@ -81,7 +87,9 @@ function handleAnswerClick(event) {
     answerState[answerIndex] = !answerState[answerIndex];
     event.target.classList.toggle("active");
 
-    if (questions[currQuestionIndex].type === "single" || questions[currQuestionIndex].type === "truefalse") {
+    if (questions[currQuestionIndex].type === "single"
+        || questions[currQuestionIndex].type === "truefalse"
+        || questions[currQuestionIndex].type === "image") {
         validateAnswers();
     }
 }
@@ -142,11 +150,13 @@ function completeQuiz() {
     if (guessed < 0) guessed = 0;
 
     let score = calculateScore(guessed,totalAnswers, timeTaken / 10000);
+    score = Math.round(score);
 
     document.getElementById("score-int").textContent = `Score: ${score}`;
     document.getElementById("score-time").textContent = `Time: ${timeTaken / 1000}s`;
     document.getElementById("score-correct").textContent = `Correct Answers: ${guessed}/${totalAnswers}`;
     document.getElementById("score").classList.remove("hidden");
+    document.getElementById("image").classList.add("hidden");
     document.getElementById("question").classList.add("hidden");
     resetButtons();
     document.querySelectorAll('.btn').forEach(btn => btn.classList.add("hidden"));
