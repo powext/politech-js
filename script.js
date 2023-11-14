@@ -29,6 +29,10 @@ async function initQuiz(event) {
     document.getElementById("question").classList.remove("hidden");
     shuffleArray(questions);
     questions = questions.slice(0, 10);
+    questions.forEach(question => {
+        if (question.type === "truefalse") return;
+        shuffleArray(question.options);
+    });
     updateQuestion(questions[currQuestionIndex]);
 }
 
@@ -45,6 +49,7 @@ function updateQuestion(question) {
     if (questions[currQuestionIndex].type === "multiple") {
         document.getElementById("multiple-disclaimer").classList.remove("hidden");
         document.getElementById("next").classList.remove("hidden");
+        document.getElementById("image").classList.add("hidden");
     } else {
         document.getElementById("multiple-disclaimer").classList.add("hidden");
         document.getElementById("next").classList.add("hidden");
