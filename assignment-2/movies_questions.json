@@ -1,0 +1,133 @@
+[
+  {
+    "question": "Which director is known for the 'Lord of the Rings' trilogy?",
+    "options": ["Peter Jackson", "Steven Spielberg", "James Cameron", "Christopher Nolan"],
+    "correct_answers": ["Peter Jackson"],
+    "type": "single"
+  },
+  {
+    "question": "Which movie features a character named 'Tony Stark'?",
+    "options": ["Iron Man", "The Dark Knight", "Man of Steel", "Spider-Man"],
+    "correct_answers": ["Iron Man"],
+    "type": "single"
+  },
+  {
+    "question": "In which movie does the character 'Neo' appear?",
+    "options": ["Inception", "The Matrix", "Blade Runner", "Minority Report"],
+    "correct_answers": ["The Matrix"],
+    "type": "single"
+  },
+  {
+    "question": "Which of these movies were directed by Alfred Hitchcock?",
+    "options": ["Psycho", "Vertigo", "Rear Window", "Citizen Kane"],
+    "correct_answers": ["Psycho", "Vertigo", "Rear Window"],
+    "type": "multiple"
+  },
+  {
+    "question": "Is 'Casablanca' a black and white movie?",
+    "options": ["True", "False"],
+    "correct_answers": ["True"],
+    "type": "truefalse"
+  },
+  {
+    "question": "Which film won the Academy Award for Best Picture in 1994?",
+    "options": ["Forrest Gump", "Pulp Fiction", "The Shawshank Redemption", "Jurassic Park"],
+    "correct_answers": ["Forrest Gump"],
+    "type": "single"
+  },
+  {
+    "question": "Who played the Joker in 'The Dark Knight'?",
+    "options": ["Heath Ledger", "Joaquin Phoenix", "Jack Nicholson", "Jared Leto"],
+    "correct_answers": ["Heath Ledger"],
+    "type": "single"
+  },
+  {
+    "question": "Which of these actors have played James Bond?",
+    "options": ["Sean Connery", "Daniel Craig", "Pierce Brosnan", "Tom Hanks"],
+    "correct_answers": ["Sean Connery", "Daniel Craig", "Pierce Brosnan"],
+    "type": "multiple"
+  },
+  {
+    "question": "Did 'Titanic' win the Oscar for Best Picture?",
+    "options": ["True", "False"],
+    "correct_answers": ["True"],
+    "type": "truefalse"
+  },
+  {
+    "question": "Who directed 'Inception'?",
+    "options": ["Martin Scorsese", "Christopher Nolan", "Steven Spielberg", "David Fincher"],
+    "correct_answers": ["Christopher Nolan"],
+    "type": "single"
+  },
+  {
+    "question": "What is the main theme of 'Schindler's List'?",
+    "options": ["World War II", "Space Exploration", "Bank Heist", "Romantic Comedy"],
+    "correct_answers": ["World War II"],
+    "type": "single"
+  },
+  {
+    "question": "Who composed the score for 'Star Wars'?",
+    "options": ["Hans Zimmer", "John Williams", "Danny Elfman", "Ennio Morricone"],
+    "correct_answers": ["John Williams"],
+    "type": "single"
+  },
+  {
+    "question": "Which of these films feature Leonardo DiCaprio?",
+    "options": ["Titanic", "Inception", "The Revenant", "Harry Potter"],
+    "correct_answers": ["Titanic", "Inception", "The Revenant"],
+    "type": "multiple"
+  },
+  {
+    "question": "Was 'Avatar' directed by James Cameron?",
+    "options": ["True", "False"],
+    "correct_answers": ["True"],
+    "type": "truefalse"
+  },
+  {
+    "question": "What is the highest-grossing film of all time?",
+    "options": ["Avatar", "Avengers: Endgame", "Titanic", "Star Wars: The Force Awakens"],
+    "correct_answers": ["Avatar"],
+    "type": "single"
+  },
+  {
+    "question": "Which movie is known for the quote 'I'll be back'?",
+    "options": ["Terminator", "Rocky", "Die Hard", "Rambo"],
+    "correct_answers": ["Terminator"],
+    "type": "single"
+  },
+  {
+    "question": "Which movie features this iconic spaceship design?",
+    "options": ["Star Wars: A New Hope", "Star Trek: The Motion Picture", "Guardians of the Galaxy", "2001: A Space Odyssey"],
+    "correct_answers": ["Star Wars: A New Hope"],
+    "image_href": "https://hips.hearstapps.com/hmg-prod/images/mf-over-takodana-swct-1544517948.png",
+    "type": "image"
+  },
+  {
+    "question": "In which movie does this building play a significant role?",
+    "options": ["Blade Runner", "Inception", "The Dark Knight", "Ghostbusters"],
+    "correct_answers": ["Inception"],
+    "image_href": "https://www.digitaltrends.com/wp-content/uploads/2014/09/inception-bend.jpg?fit=750%2C495&p=1",
+    "type": "image"
+  },
+  {
+    "question": "This famous scene is from which movie?",
+    "options": ["Pulp Fiction", "The Godfather", "Goodfellas", "Scarface"],
+    "correct_answers": ["Pulp Fiction"],
+    "image_href": "https://faroutmagazine.co.uk/static/uploads/1/2016/02/Remembering-when-Quentin-Tarantino-danced-behind-the-camera-during-iconic-Pulp-Fiction-scene.jpg",
+    "type": "image"
+  },
+  {
+    "question": "Identify the movie from this iconic costume.",
+    "options":  ["Batman Begins", "Spider-Man", "Iron Man", "The Avengers"],
+    "correct_answers": ["Spider-Man"],
+    "image_href": "https://i.imgur.com/8Eq6V.jpg",
+    "type": "image"
+  },
+  {
+    "question": "Which movie features this landmark in a key scene?",
+    "options":  ["Skyfall", "Mission: Impossible", "The Bourne Ultimatum", "Casino Royale"],
+    "correct_answers": ["Skyfall"],
+    "image_href": "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/8/2022/08/2B339T7.jpg",
+    "type": "image"
+  }
+]

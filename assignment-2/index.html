@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.0.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="script.js" ></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="flex justify-between">
+    <div class="flex flex-col justify-center items-center">
+        <div class="flex flex-col grow items-stretch my-10 max-w-none xl:max-w-md">
+            <span class="inline-grid">
+                <span class="row-start-1 col-start-1 text-center rainbow-text text-5xl md:text-6xl">TODO: Cinema</span>
+                <span class="row-start-1 col-start-1 text-center rainbow-text rainbow-text-bg text-5xl md:text-6xl">TODO: Cinema</span>
+            </span>
+            <form id="addToDo" class="flex flex-col gap-1 text-white">
+                <label>Title</label><input id="title" type="text" class="input input-sm text-black" required placeholder="Titanic">
+                <label for="platform">Platform</label>
+                <select name="platform" id="platform" class="text-black" size="6" required multiple>
+                    <option value="netflix" class="text-black">Netflix</option>
+                    <option value="amazon-prime" class="text-black">Amazon Prime</option>
+                    <option value="cinema" class="text-black">Cinema</option>
+                    <option value="blu-ray" class="text-black">Blu-ray</option>
+                    <option value="myCanal" class="text-black">myCanal</option>
+                    <option value="others" class="text-black">Done</option>
+                </select>
+                <label for="actors">Actors</label><input id="actors" type="text" class="input input-sm text-black" placeholder="Leonardo Di Caprio, John Travolta" required>
+                <label for="director">Director</label><input id="director" type="text" class="input input-sm text-black" placeholder="Quentin Tarantino">
+                <label for="year">Release Year</label><input id="year" type="number" class="input input-sm text-black" placeholder="1999">
+                <label for="poster-img">Poster</label><input id="poster-img" type="url" class="input input-sm text-black" placeholder="https://url.it/img.png">
+                <button class="btn btn-primary my-2" id="add">Add</button>
+            </form>
+        </div>
+        <div class="flex w-full text-white space-x-3 px-2 items-center">
+            <label for="search">Search</label><input id="search" placeholder="E.T...." type="text" class="input input-sm text-black" required>
+        </div>
+        <table id="table" class="table text-white">
+            <thead>
+            <tr class="text-white">
+                <th onclick="sortTable(0)">Title</th>
+                <th onclick="sortTable(1)">Platforms</th>
+                <th onclick="sortTable(2)">Actors</th>
+                <th onclick="sortTable(3)">Director</th>
+                <th onclick="sortTable(4)">Release Year</th>
+                <th onclick="sortTable(5)">Poster</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody id="todos">
+            </tbody>
+        </table>
+        <button class="btn btn-primary my-2" id="removeAll">Remove All</button>
+    </div>
+    <footer>
+        <p>
+            Created by <a href="https://github.com/powext" target="_blank" rel="noopener noreferrer">Simone Bianchin</a>
+        </p>
+    </footer>
+</body>
+</html>
